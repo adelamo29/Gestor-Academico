@@ -1,0 +1,524 @@
+05-Nov-2023 11:27:53.908 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+05-Nov-2023 11:27:53.908 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+05-Nov-2023 11:27:53.917 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@1255b1d1')
+05-Nov-2023 11:28:15.005 GRAVE [http-nio-8080-exec-8] org.apache.catalina.core.ApplicationDispatcher.invoke El Servlet.service() para servlet [jsp] lanzó una excepción
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [25] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+24:         <h1>Asignaturas Impartidas</h1>
+25:         <% for (Asignatura asignatura : asignaturaImpartidas) { %>
+26:             <div class="asignatura-div">
+27:                 <h2><%= asignatura.getNombre() %></h2>
+28:                 <p><strong>Titulacion:</strong> <%= asignatura.getTitulacion() %></p>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controllers.Profesor.doGet(Profesor.java:37)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1790)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+05-Nov-2023 11:28:15.005 GRAVE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [controllers.Profesor] en el contexto con ruta [/gestoracademico] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [25] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+24:         <h1>Asignaturas Impartidas</h1>
+25:         <% for (Asignatura asignatura : asignaturaImpartidas) { %>
+26:             <div class="asignatura-div">
+27:                 <h2><%= asignatura.getNombre() %></h2>
+28:                 <p><strong>Titulacion:</strong> <%= asignatura.getTitulacion() %></p>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [25] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+24:         <h1>Asignaturas Impartidas</h1>
+25:         <% for (Asignatura asignatura : asignaturaImpartidas) { %>
+26:             <div class="asignatura-div">
+27:                 <h2><%= asignatura.getNombre() %></h2>
+28:                 <p><strong>Titulacion:</strong> <%= asignatura.getTitulacion() %></p>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controllers.Profesor.doGet(Profesor.java:37)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1790)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+05-Nov-2023 11:29:05.102 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+05-Nov-2023 11:29:05.102 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+05-Nov-2023 11:29:05.139 ADVERTENCIA [main] org.apache.catalina.session.StandardSession.doWriteObject No puedo serializar atributo de sesión [ASIGNATURAS IMPARTIDAS] para sesión [257B477EFEB70BBAC6EB7BE2FF8CD28E]
+	java.io.NotSerializableException: gestoracademico.Asignatura
+		at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1187)
+		at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:350)
+		at java.base/java.util.ArrayList.writeObject(ArrayList.java:866)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1070)
+		at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1516)
+		at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1438)
+		at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1181)
+		at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:350)
+		at org.apache.catalina.session.StandardSession.doWriteObject(StandardSession.java:1647)
+		at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:1015)
+		at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:307)
+		at org.apache.catalina.session.StandardManager.unload(StandardManager.java:259)
+		at org.apache.catalina.session.StandardManager.stopInternal(StandardManager.java:374)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5143)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+		at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348)
+		at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:931)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+		at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348)
+		at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:931)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+		at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:496)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+		at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:974)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+		at org.apache.catalina.startup.Catalina.stop(Catalina.java:849)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:811)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+05-Nov-2023 11:29:18.928 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+05-Nov-2023 11:29:18.928 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+05-Nov-2023 11:29:18.931 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@3ebff828')
+05-Nov-2023 11:29:19.915 ADVERTENCIA [main] org.apache.catalina.session.StandardSession.doReadObject Cannot deserialize session attribute [ASIGNATURAS IMPARTIDAS] for session [257B477EFEB70BBAC6EB7BE2FF8CD28E]
+05-Nov-2023 11:29:29.625 GRAVE [http-nio-8080-exec-6] org.apache.catalina.core.ApplicationDispatcher.invoke El Servlet.service() para servlet [jsp] lanzó una excepción
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [25] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+24:         <h1>Asignaturas Impartidas</h1>
+25:         <% for (Asignatura asignatura : asignaturaImpartidas) { %>
+26:             <div class="asignatura-div">
+27:                 <h2><%= asignatura.getNombre() %></h2>
+28:                 <p><strong>Titulacion:</strong> <%= asignatura.getTitulacion() %></p>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controllers.Profesor.doGet(Profesor.java:37)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1790)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+05-Nov-2023 11:29:29.625 GRAVE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [controllers.Profesor] en el contexto con ruta [/gestoracademico] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [25] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+24:         <h1>Asignaturas Impartidas</h1>
+25:         <% for (Asignatura asignatura : asignaturaImpartidas) { %>
+26:             <div class="asignatura-div">
+27:                 <h2><%= asignatura.getNombre() %></h2>
+28:                 <p><strong>Titulacion:</strong> <%= asignatura.getTitulacion() %></p>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [20] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+17:         <% Usuario usuario = new Usuario();
+18:         usuario= (Usuario)session.getAttribute("Usuario"); %>
+19: 
+20:         <% List<Asignatura> asignaturaImpartidas = (List<Asignatura>) request.getAttribute("ASIGNATURAS IMPARTIDAS"); %>
+21: 
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+
+
+Ha tenido lugar un error en la línea: [25] en el archivo jsp: [/jsp/profesor.jsp]
+Asignatura cannot be resolved to a type
+22:         <div><%@include file = "barraSuperiorProf.jsp" %> </div>
+23:         
+24:         <h1>Asignaturas Impartidas</h1>
+25:         <% for (Asignatura asignatura : asignaturaImpartidas) { %>
+26:             <div class="asignatura-div">
+27:                 <h2><%= asignatura.getNombre() %></h2>
+28:                 <p><strong>Titulacion:</strong> <%= asignatura.getTitulacion() %></p>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controllers.Profesor.doGet(Profesor.java:37)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1790)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+05-Nov-2023 11:31:58.840 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+05-Nov-2023 11:31:58.840 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+05-Nov-2023 11:34:12.704 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+05-Nov-2023 11:34:12.705 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+05-Nov-2023 11:34:12.708 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@2ce86164')
+05-Nov-2023 11:34:25.981 GRAVE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [controllers.InicioSesion] lanzó excepción
+	java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because the return value of "gestoracademico.Usuario.getTipo()" is null
+		at controllers.InicioSesion.doPost(InicioSesion.java:43)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1790)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+05-Nov-2023 16:59:43.214 GRAVE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [controllers.Profesor] lanzó excepción
+	java.lang.NullPointerException: Cannot invoke "gestoracademico.Usuario.getId()" because "<local4>" is null
+		at controllers.Profesor.doGet(Profesor.java:29)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1790)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+05-Nov-2023 17:10:38.757 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+05-Nov-2023 17:10:38.758 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+05-Nov-2023 17:10:44.103 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+05-Nov-2023 17:10:44.103 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+05-Nov-2023 17:10:44.106 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@2ce86164')
+05-Nov-2023 17:48:19.518 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+05-Nov-2023 17:48:19.519 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+05-Nov-2023 17:48:32.972 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+05-Nov-2023 17:48:32.972 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+05-Nov-2023 17:48:32.974 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@5e8f9e2d')

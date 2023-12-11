@@ -1,0 +1,116 @@
+*{margin: 0; padding: 0;}
+
+.navbar-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+} 
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(133, 234, 148);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-bottom-style: outset;
+    border-bottom-color: rgb(133, 234, 148, 0.5);
+} 
+
+li{
+    color: white;
+    display: inline;
+    float: right;
+    font-size: larger;
+} 
+
+a{
+    display: block;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: rgb(133, 234, 148);
+    color: #333;
+    text-decoration: none;
+} 
+
+p{
+    padding: 15px 20px;
+    text-align: center;
+    background-color: rgb(133, 234, 148);
+    color: #333;
+} 
+
+li a:hover{
+    background-color: #333;
+    color: white;
+} 
+
+.izq{
+    padding: 15px 20px;
+    color: #333;
+    float: left;
+} 
+
+.buscar{
+    text-align: center;
+    background-color: rgb(133, 234, 148);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+} 
+
+#idEst{
+    display: block;
+    padding: 5px 2px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    outline: none;
+    border-radius: 8px;
+    margin-top: 12px;
+} 
+
+#btnBuscar{
+    display: block;
+    padding: 5px 2px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    outline: none;
+    border-radius: 8px;
+    margin-top: 12px;
+    margin-right: 10px;
+    cursor: pointer;
+}  
+
+.dropdown{
+    display: inline-block;
+    position: relative;
+} 
+
+.dropdown-content{
+    display: none;
+    position:static;
+    width: 100%;
+    overflow: auto;
+} 
+
+.dropdown:hover .dropdown-content{
+    display: block;
+    
+} 
+
+.dropdown-content a{
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+} 
+
+.dropdown-content a:hover{
+    background-color: #333;
+    color: white;
+} 
