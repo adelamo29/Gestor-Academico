@@ -230,6 +230,7 @@
                     var fecha = datosParticipacion[i].fecha;
                     anios.push(fecha);
                 }
+                
 
                 for (var i = 0; i < datosParticipacion.length; i++) {
                     var participacionNota = datosParticipacion[i].nota_media;
